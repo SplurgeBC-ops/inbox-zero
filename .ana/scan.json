@@ -1,0 +1,1139 @@
+{
+  "schemaVersion": "1.0",
+  "applicationShape": "web-app",
+  "overview": {
+    "project": "inbox-zero",
+    "scannedAt": "2026-05-21T21:01:04.947Z",
+    "depth": "deep"
+  },
+  "stack": {
+    "language": "TypeScript",
+    "framework": "Next.js",
+    "database": "Prisma",
+    "auth": "Better Auth",
+    "testing": [
+      "Vitest",
+      "Playwright",
+      "Testing Library"
+    ],
+    "payments": "Stripe",
+    "workspace": "Turborepo (pnpm)",
+    "aiSdk": "Vercel AI",
+    "uiSystem": "shadcn/ui (Tailwind)"
+  },
+  "versions": {
+    "@ai-sdk/amazon-bedrock": "4.0.107",
+    "@ai-sdk/anthropic": "3.0.78",
+    "@ai-sdk/azure": "3.0.65",
+    "@ai-sdk/gateway": "3.0.115",
+    "@ai-sdk/google": "3.0.75",
+    "@ai-sdk/google-vertex": "4.0.130",
+    "@ai-sdk/groq": "3.0.39",
+    "@ai-sdk/mcp": "1.0.42",
+    "@ai-sdk/openai": "3.0.64",
+    "@ai-sdk/openai-compatible": "2.0.47",
+    "@ai-sdk/perplexity": "3.0.33",
+    "@ai-sdk/provider": "3.0.10",
+    "@ai-sdk/react": "3.0.186",
+    "@apple/app-store-server-library": "3.1.0",
+    "@asteasolutions/zod-to-openapi": "8.5.0",
+    "@better-auth/expo": "1.6.11",
+    "@better-auth/scim": "1.6.11",
+    "@better-auth/sso": "1.6.11",
+    "@chat-adapter/slack": "4.28.1",
+    "@chat-adapter/state-ioredis": "4.28.1",
+    "@chat-adapter/state-memory": "4.28.1",
+    "@chat-adapter/teams": "4.28.1",
+    "@chat-adapter/telegram": "4.28.1",
+    "@date-fns/tz": "1.4.1",
+    "@dub/analytics": "0.0.32",
+    "@formkit/auto-animate": "0.9.0",
+    "@googleapis/calendar": "14.2.0",
+    "@googleapis/drive": "20.1.0",
+    "@googleapis/gmail": "16.1.1",
+    "@googleapis/people": "7.0.1",
+    "@headlessui/react": "2.2.10",
+    "@hookform/resolvers": "5.2.2",
+    "@inboxzero/image-proxy": "workspace:*",
+    "@inboxzero/loops": "workspace:*",
+    "@inboxzero/resend": "workspace:*",
+    "@inboxzero/scheduling": "workspace:*",
+    "@inboxzero/tinybird": "workspace:*",
+    "@inboxzero/tinybird-ai-analytics": "workspace:*",
+    "@lemonsqueezy/lemonsqueezy.js": "4.0.0",
+    "@mdx-js/loader": "3.1.1",
+    "@mdx-js/react": "3.1.1",
+    "@microsoft/microsoft-graph-client": "3.0.7",
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "@mux/mux-player-react": "3.13.0",
+    "@next/mdx": "16.2.6",
+    "@next/third-parties": "16.2.6",
+    "@openrouter/ai-sdk-provider": "2.9.0",
+    "@portabletext/react": "6.2.0",
+    "@posthog/ai": "7.18.8",
+    "@prisma/adapter-pg": "7.8.0",
+    "@prisma/client": "7.8.0",
+    "@radix-ui/react-alert-dialog": "1.1.15",
+    "@radix-ui/react-avatar": "1.1.11",
+    "@radix-ui/react-checkbox": "1.3.3",
+    "@radix-ui/react-collapsible": "1.1.12",
+    "@radix-ui/react-dialog": "1.1.15",
+    "@radix-ui/react-dropdown-menu": "2.1.16",
+    "@radix-ui/react-hover-card": "1.1.15",
+    "@radix-ui/react-label": "2.1.8",
+    "@radix-ui/react-navigation-menu": "1.2.14",
+    "@radix-ui/react-popover": "1.1.15",
+    "@radix-ui/react-progress": "1.1.8",
+    "@radix-ui/react-radio-group": "1.3.8",
+    "@radix-ui/react-scroll-area": "1.2.10",
+    "@radix-ui/react-select": "2.2.6",
+    "@radix-ui/react-separator": "1.1.8",
+    "@radix-ui/react-slot": "1.2.4",
+    "@radix-ui/react-switch": "1.2.6",
+    "@radix-ui/react-tabs": "1.1.13",
+    "@radix-ui/react-toggle": "1.1.10",
+    "@radix-ui/react-tooltip": "1.2.8",
+    "@radix-ui/react-use-controllable-state": "1.2.2",
+    "@react-email/render": "2.0.8",
+    "@sentry/nextjs": "10.53.1",
+    "@serwist/next": "9.5.11",
+    "@slack/types": "2.21.1",
+    "@slack/web-api": "7.15.2",
+    "@stripe/stripe-js": "9.5.0",
+    "@t3-oss/env-nextjs": "0.13.11",
+    "@tailwindcss/forms": "0.5.11",
+    "@tailwindcss/typography": "0.5.19",
+    "@tanstack/react-table": "8.21.3",
+    "@tanstack/react-virtual": "3.13.24",
+    "@tiptap/extension-mention": "2.26.1",
+    "@tiptap/extension-placeholder": "2.26.1",
+    "@tiptap/pm": "2.26.1",
+    "@tiptap/react": "2.26.1",
+    "@tiptap/starter-kit": "2.26.1",
+    "@tiptap/suggestion": "2.26.1",
+    "@upstash/qstash": "2.11.0",
+    "@upstash/redis": "1.38.0",
+    "@vercel/analytics": "2.0.1",
+    "@vercel/queue": "0.1.7",
+    "@vercel/speed-insights": "2.0.0",
+    "ai": "6.0.184",
+    "better-auth": "1.6.11",
+    "braintrust": "3.10.0",
+    "bullmq": "5.76.10",
+    "capital-case": "2.0.0",
+    "chat": "4.28.1",
+    "cheerio": "1.2.0",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "cmdk": "1.1.1",
+    "crisp-sdk-web": "1.1.2",
+    "cronstrue": "3.14.0",
+    "date-fns": "4.1.0",
+    "dompurify": "3.4.5",
+    "dub": "0.71.5",
+    "easymde": "2.21.0",
+    "email-reply-parser": "2.3.5",
+    "embla-carousel-react": "8.6.0",
+    "encoding": "0.1.13",
+    "fast-deep-equal": "3.1.3",
+    "fast-xml-parser": "5.8.0",
+    "framer-motion": "12.38.0",
+    "gaxios": "7.1.4",
+    "gmail-api-parse-message": "2.1.2",
+    "google": "link:@next/third-parties/google",
+    "he": "1.2.0",
+    "html-to-text": "10.0.0",
+    "ioredis": "5.10.1",
+    "jotai": "2.20.0",
+    "jsonrepair": "3.14.0",
+    "lodash": "4.18.1",
+    "lucide-react": "1.16.0",
+    "mammoth": "1.12.0",
+    "motion": "12.38.0",
+    "next": "16.2.6",
+    "next-axiom": "1.10.0",
+    "next-safe-action": "8.5.2",
+    "next-themes": "0.4.6",
+    "nodemailer": "8.0.7",
+    "nuqs": "2.8.9",
+    "ollama-ai-provider-v2": "3.5.1",
+    "openai": "6.38.0",
+    "p-queue": "9.3.0",
+    "p-retry": "8.0.0",
+    "pg": "8.20.0",
+    "posthog-js": "1.374.0",
+    "posthog-node": "5.34.3",
+    "prisma": "7.8.0",
+    "react": "19.2.6",
+    "react-day-picker": "8.10.1",
+    "react-dom": "19.2.6",
+    "react-dom-confetti": "0.2.0",
+    "react-hook-form": "7.76.0",
+    "react-hotkeys-hook": "5.3.2",
+    "react-markdown": "10.1.0",
+    "react-resizable-panels": "2.1.7",
+    "react-syntax-highlighter": "16.1.1",
+    "react-textarea-autosize": "8.5.9",
+    "react-youtube": "10.1.0",
+    "recharts": "2.15.4",
+    "remark-gfm": "4.0.1",
+    "sanity-plugin-markdown": "8.0.5",
+    "schema-dts": "2.0.0",
+    "serialize-error": "13.0.1",
+    "server-only": "0.0.1",
+    "shiki": "4.0.2",
+    "sonner": "2.0.7",
+    "streamdown": "2.5.0",
+    "string-similarity": "4.0.4",
+    "strip-indent": "4.1.1",
+    "stripe": "22.1.1",
+    "swr": "2.4.1",
+    "tailwind-merge": "2.6.0",
+    "tailwindcss-animate": "1.0.7",
+    "tiptap-markdown": "0.8.10",
+    "tldts": "7.0.30",
+    "undici": "8.3.0",
+    "unpdf": "1.6.2",
+    "use-stick-to-bottom": "1.1.4",
+    "usehooks-ts": "3.1.1",
+    "zod": "4.2.1",
+    "@headlessui/tailwindcss": "0.2.2",
+    "@microsoft/microsoft-graph-types": "2.43.1",
+    "@playwright/test": "1.60.0",
+    "@testing-library/react": "16.3.2",
+    "@types/email-reply-parser": "1.4.2",
+    "@types/he": "1.2.3",
+    "@types/html-to-text": "9.0.4",
+    "@types/jsdom": "28.0.3",
+    "@types/lodash": "4.17.24",
+    "@types/mdx": "2.0.13",
+    "@types/node": "24.10.1",
+    "@types/nodemailer": "8.0.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@types/react-syntax-highlighter": "15.5.13",
+    "@types/string-similarity": "4.0.2",
+    "@vitest/coverage-v8": "4.1.6",
+    "@vitest/ui": "4.1.6",
+    "autoprefixer": "10.4.24",
+    "cross-env": "10.1.0",
+    "dotenv": "17.4.2",
+    "dotenv-cli": "11.0.0",
+    "emulate": "npm:@inbox-zero/emulate@0.5.0",
+    "jsdom": "27.3.0",
+    "postcss": "8.5.6",
+    "serwist": "9.5.11",
+    "tailwindcss": "3.4.17",
+    "tsconfig": "workspace:*",
+    "typescript": "6.0.3",
+    "vite-tsconfig-paths": "6.1.1",
+    "vitest": "4.1.6",
+    "vitest-mock-extended": "4.0.0"
+  },
+  "files": {
+    "source": 1732,
+    "test": 550,
+    "config": 39,
+    "total": 2321
+  },
+  "structure": [
+    {
+      "path": ".github/",
+      "purpose": "GitHub config"
+    },
+    {
+      "path": ".vscode/",
+      "purpose": "VS Code config"
+    },
+    {
+      "path": "apps/",
+      "purpose": "Applications"
+    },
+    {
+      "path": "docker/",
+      "purpose": "Docker configurations"
+    },
+    {
+      "path": "docs/",
+      "purpose": "Documentation"
+    },
+    {
+      "path": "packages/",
+      "purpose": "Workspace packages"
+    },
+    {
+      "path": "scripts/",
+      "purpose": "Build/utility scripts"
+    }
+  ],
+  "commands": {
+    "build": "pnpm run build",
+    "test": "pnpm run test",
+    "lint": "pnpm run lint",
+    "dev": "pnpm run dev",
+    "all": {
+      "build": "turbo build --filter=./apps/web",
+      "dev": "turbo dev --filter=./apps/web",
+      "worker": "pnpm --filter @inboxzero/worker start",
+      "test": "turbo run test --filter=./apps/web -- --run",
+      "test-integration": "pnpm --filter inbox-zero-ai test-integration",
+      "test:packages": "pnpm -r --filter @inbox-zero/api --filter @inbox-zero/cli --filter @inboxzero/image-proxy --filter @inboxzero/image-proxy-aws test",
+      "lint": "turbo lint",
+      "postinstall": "sh clone-marketing.sh",
+      "prepare": "husky install",
+      "ncu": "ncu -u -ws",
+      "check": "ultracite check",
+      "fix": "ultracite fix",
+      "dev-setup": "tsx scripts/dev-setup.ts",
+      "setup": "tsx packages/cli/src/main.ts setup",
+      "setup-aws": "tsx packages/cli/src/main.ts setup-aws",
+      "setup-terraform": "tsx packages/cli/src/main.ts setup-terraform",
+      "start:cli": "tsx packages/cli/src/main.ts start",
+      "docker:local:build": "./docker/scripts/publish-ghcr.sh --local",
+      "docker:local:push": "./docker/scripts/publish-ghcr.sh",
+      "docker:local:run": "./docker/scripts/run-local.sh"
+    },
+    "packageManager": "pnpm"
+  },
+  "git": {
+    "head": "6044fde9f",
+    "branch": "main",
+    "commitCount": 10262,
+    "lastCommitAt": "2026-05-21T18:34:22+03:00",
+    "uncommittedChanges": false,
+    "contributorCount": 66,
+    "defaultBranch": "main",
+    "branches": [
+      "main",
+      "pre-prod"
+    ],
+    "commitFormat": {
+      "conventional": false,
+      "confidence": 0.22,
+      "sampleSize": 50
+    },
+    "branchPatterns": {
+      "prefixes": {},
+      "primary": null
+    },
+    "hooks": {
+      "preCommit": {
+        "exists": true,
+        "runsTests": false,
+        "runsLint": true,
+        "runsTypecheck": false
+      }
+    },
+    "mergeStrategy": {
+      "strategy": "merge",
+      "confidence": 1
+    },
+    "coAuthor": {
+      "detected": true,
+      "pattern": "Eliezer Steinbock <3090527+elie222@users.noreply.github.com>"
+    },
+    "recentActivity": {
+      "windowDays": 14,
+      "highChurnFiles": [
+        {
+          "path": "apps/web/utils/messaging/rule-notifications.test.ts",
+          "commits": 9
+        },
+        {
+          "path": "apps/web/__tests__/integration/slack-notifications.test.ts",
+          "commits": 8
+        },
+        {
+          "path": "apps/web/utils/follow-up/labels.ts",
+          "commits": 7
+        },
+        {
+          "path": "apps/web/utils/follow-up/send-follow-up-notification.test.ts",
+          "commits": 7
+        },
+        {
+          "path": "apps/web/utils/messaging/rule-notifications.ts",
+          "commits": 7
+        },
+        {
+          "path": "apps/web/utils/ai/reply/draft-reply.ts",
+          "commits": 6
+        },
+        {
+          "path": "apps/web/app/api/follow-up-reminders/process.test.ts",
+          "commits": 6
+        },
+        {
+          "path": "apps/web/app/api/follow-up-reminders/process.ts",
+          "commits": 6
+        },
+        {
+          "path": "apps/web/utils/follow-up/follow-up-actions.test.ts",
+          "commits": 6
+        },
+        {
+          "path": "apps/web/utils/follow-up/labels.test.ts",
+          "commits": 6
+        }
+      ],
+      "activeContributors": 4,
+      "weeklyCommits": [
+        53,
+        82,
+        80,
+        98
+      ]
+    }
+  },
+  "monorepo": {
+    "isMonorepo": true,
+    "tool": "pnpm",
+    "packages": [
+      {
+        "name": "inbox-zero-ai",
+        "path": "apps/web",
+        "language": "TypeScript",
+        "framework": "Next.js",
+        "testing": [
+          "Vitest",
+          "Playwright",
+          "Testing Library"
+        ],
+        "hasBin": false,
+        "scripts": [
+          "dev",
+          "dev:e2e",
+          "build",
+          "build:ci",
+          "start",
+          "start:standalone",
+          "lint",
+          "check-enums",
+          "check-server-actions",
+          "check-client-redirects",
+          "generate-llm-pricing",
+          "test",
+          "test-ai",
+          "test-e2e",
+          "test-integration",
+          "test-e2e:flows",
+          "test:smoke",
+          "emulate:google",
+          "emulate:microsoft",
+          "telegram:setup",
+          "prisma:migrate:e2e",
+          "prisma:migrate:local",
+          "preinstall",
+          "postinstall"
+        ],
+        "sourceFiles": 2211
+      },
+      {
+        "name": "@inboxzero/image-proxy-worker",
+        "path": "apps/image-proxy",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [],
+        "hasBin": false,
+        "scripts": [
+          "deploy",
+          "dev"
+        ],
+        "sourceFiles": 1
+      },
+      {
+        "name": "@inboxzero/image-proxy-aws",
+        "path": "apps/image-proxy-aws",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [
+          "Vitest"
+        ],
+        "hasBin": false,
+        "scripts": [
+          "build",
+          "test"
+        ],
+        "sourceFiles": 2
+      },
+      {
+        "name": "@inboxzero/worker",
+        "path": "apps/worker",
+        "language": "JavaScript",
+        "framework": null,
+        "testing": [],
+        "hasBin": false,
+        "scripts": [
+          "start"
+        ],
+        "sourceFiles": 0
+      },
+      {
+        "name": "@inbox-zero/api",
+        "path": "packages/api",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [
+          "Vitest"
+        ],
+        "hasBin": true,
+        "scripts": [
+          "build",
+          "prepublishOnly",
+          "dev",
+          "test",
+          "test:watch"
+        ],
+        "sourceFiles": 10
+      },
+      {
+        "name": "@inbox-zero/cli",
+        "path": "packages/cli",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [
+          "Vitest"
+        ],
+        "hasBin": true,
+        "scripts": [
+          "build",
+          "prepublishOnly",
+          "build:binary",
+          "build:binary:all",
+          "build:binary:macos-arm64",
+          "build:binary:macos-x64",
+          "build:binary:linux-x64",
+          "dev",
+          "test",
+          "test:watch"
+        ],
+        "sourceFiles": 16
+      },
+      {
+        "name": "@inboxzero/image-proxy",
+        "path": "packages/image-proxy",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [
+          "Vitest"
+        ],
+        "hasBin": false,
+        "scripts": [
+          "test",
+          "test:coverage"
+        ],
+        "sourceFiles": 7
+      },
+      {
+        "name": "@inboxzero/loops",
+        "path": "packages/loops",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [],
+        "hasBin": false,
+        "scripts": [],
+        "sourceFiles": 2
+      },
+      {
+        "name": "@inboxzero/resend",
+        "path": "packages/resend",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [],
+        "hasBin": false,
+        "scripts": [
+          "dev"
+        ],
+        "sourceFiles": 18
+      },
+      {
+        "name": "@inboxzero/scheduling",
+        "path": "packages/scheduling",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [
+          "Vitest"
+        ],
+        "hasBin": false,
+        "scripts": [
+          "test"
+        ],
+        "sourceFiles": 2
+      },
+      {
+        "name": "@inboxzero/tinybird",
+        "path": "packages/tinybird",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [],
+        "hasBin": false,
+        "scripts": [],
+        "sourceFiles": 5
+      },
+      {
+        "name": "@inboxzero/tinybird-ai-analytics",
+        "path": "packages/tinybird-ai-analytics",
+        "language": "TypeScript",
+        "framework": null,
+        "testing": [],
+        "hasBin": false,
+        "scripts": [],
+        "sourceFiles": 5
+      },
+      {
+        "name": "tsconfig",
+        "path": "packages/tsconfig",
+        "language": null,
+        "framework": null,
+        "testing": [],
+        "hasBin": false,
+        "scripts": [],
+        "sourceFiles": 0
+      }
+    ],
+    "primaryPackage": {
+      "name": "inbox-zero-ai",
+      "path": "apps/web"
+    }
+  },
+  "surfaces": [
+    {
+      "name": "web",
+      "path": "apps/web",
+      "packageName": "inbox-zero-ai",
+      "language": "TypeScript",
+      "framework": "Next.js",
+      "testing": [
+        "Vitest",
+        "Playwright",
+        "Testing Library"
+      ],
+      "sourceFiles": 2211
+    },
+    {
+      "name": "api",
+      "path": "packages/api",
+      "packageName": "@inbox-zero/api",
+      "language": "TypeScript",
+      "framework": null,
+      "testing": [
+        "Vitest"
+      ],
+      "sourceFiles": 10
+    },
+    {
+      "name": "cli",
+      "path": "packages/cli",
+      "packageName": "@inbox-zero/cli",
+      "language": "TypeScript",
+      "framework": null,
+      "testing": [
+        "Vitest"
+      ],
+      "sourceFiles": 16
+    }
+  ],
+  "externalServices": [
+    {
+      "name": "Stripe",
+      "category": "payments",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": [
+        "payments"
+      ]
+    },
+    {
+      "name": "Nodemailer",
+      "category": "email",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel",
+      "category": "hosting",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Resend",
+      "category": "email",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Sentry",
+      "category": "monitoring",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "PostHog",
+      "category": "analytics",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Lemon Squeezy",
+      "category": "payments",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "OpenAI",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel Speed Insights",
+      "category": "analytics",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": [
+        "aiSdk"
+      ]
+    },
+    {
+      "name": "Vercel AI (Anthropic)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (OpenAI)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (Google)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (Google Vertex)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (Bedrock)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (Azure)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (Groq)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (Perplexity)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (Gateway)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (MCP)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (OpenAI Compatible)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Vercel AI (OpenRouter)",
+      "category": "ai",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "React Email",
+      "category": "email",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Upstash QStash",
+      "category": "jobs",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "BullMQ",
+      "category": "jobs",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Redis",
+      "category": "cache",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    },
+    {
+      "name": "Upstash Redis",
+      "category": "cache",
+      "source": "dependency",
+      "configFound": false,
+      "stackRoles": []
+    }
+  ],
+  "schemas": {
+    "prisma": {
+      "found": true,
+      "path": "apps/web/prisma/schema.prisma",
+      "modelCount": 63,
+      "provider": "postgresql"
+    }
+  },
+  "secrets": {
+    "envFileExists": false,
+    "envExampleExists": false,
+    "gitignoreCoversEnv": true
+  },
+  "projectProfile": {
+    "type": "nextjs",
+    "hasExternalAPIs": true,
+    "hasDatabase": true,
+    "hasBrowserUI": true,
+    "hasAuthSystem": true,
+    "hasPayments": true,
+    "hasFileStorage": false
+  },
+  "blindSpots": [],
+  "findings": [
+    {
+      "id": "api-validation",
+      "severity": "warn",
+      "title": "108/168 API routes have no validation imports",
+      "detail": "Checked top-of-file imports for validation libraries. Routes using\nwrapper-based or middleware-based validation may not be detected.",
+      "category": "security"
+    },
+    {
+      "id": "hardcoded-secret",
+      "severity": "pass",
+      "title": "No hardcoded secrets detected",
+      "detail": "Checked: Stripe, OpenAI, Anthropic, AWS, GitHub, database URLs, Resend, SendGrid, Twilio",
+      "category": "security"
+    },
+    {
+      "id": "env-hygiene",
+      "severity": "pass",
+      "title": "No environment config detected",
+      "detail": null,
+      "category": "quality"
+    },
+    {
+      "id": "error-boundaries",
+      "severity": "pass",
+      "title": "Error boundary detected",
+      "detail": null,
+      "category": "reliability"
+    }
+  ],
+  "deployment": {
+    "platform": "Cloudflare Workers",
+    "configFile": "apps/image-proxy/wrangler.jsonc",
+    "ci": "GitHub Actions",
+    "ciWorkflowFiles": [
+      "ai-evals.yml",
+      "api-release.yml",
+      "build-changelog.yml",
+      "build-check.yml",
+      "build_and_publish_docker.yml",
+      "claude-code-review.yml",
+      "claude.yml",
+      "cli-release.yml",
+      "deploy-image-proxy.yml",
+      "e2e-flows.yml",
+      "smoke.yml",
+      "test.yml"
+    ]
+  },
+  "patterns": {
+    "errorHandling": {
+      "library": "exceptions",
+      "variant": "nextjs",
+      "confidence": 0.8,
+      "evidence": [
+        "nextjs uses try/catch error handling"
+      ]
+    },
+    "validation": {
+      "library": "zod",
+      "confidence": 0.9500000000000001,
+      "evidence": [
+        "zod in dependencies",
+        "Zod imports found in code",
+        "Zod usage patterns detected"
+      ]
+    },
+    "database": {
+      "library": "prisma",
+      "confidence": 0.8,
+      "evidence": [
+        "@prisma/client in dependencies"
+      ]
+    },
+    "testing": {
+      "library": "vitest",
+      "confidence": 0.75,
+      "evidence": [
+        "vitest in devDependencies"
+      ]
+    },
+    "dataFetching": {
+      "library": "swr",
+      "confidence": 0.75,
+      "evidence": [
+        "swr in dependencies"
+      ]
+    },
+    "stateManagement": {
+      "library": "jotai",
+      "confidence": 0.75,
+      "evidence": [
+        "jotai in dependencies"
+      ]
+    },
+    "formHandling": {
+      "library": "react-hook-form",
+      "confidence": 0.75,
+      "evidence": [
+        "react-hook-form in dependencies"
+      ]
+    },
+    "sampledFiles": 750,
+    "detectionTime": 4,
+    "threshold": 0.7
+  },
+  "conventions": {
+    "naming": {
+      "files": {
+        "majority": "PascalCase",
+        "confidence": 0.8034557235421166,
+        "mixed": false,
+        "distribution": {
+          "camelCase": 0.06331877729257641,
+          "PascalCase": 0.8122270742358079,
+          "kebab-case": 0.12445414847161572
+        },
+        "sampleSize": 750
+      },
+      "functions": {
+        "majority": "PascalCase",
+        "confidence": 0.5283522348232156,
+        "mixed": true,
+        "distribution": {
+          "camelCase": 0.46921017402945114,
+          "PascalCase": 0.5301204819277109,
+          "SCREAMING_SNAKE_CASE": 0.0006693440428380187
+        },
+        "sampleSize": 1529
+      },
+      "classes": {
+        "majority": "PascalCase",
+        "confidence": 0.2857142857142857,
+        "mixed": false,
+        "distribution": {
+          "PascalCase": 1
+        },
+        "sampleSize": 2
+      },
+      "variables": {
+        "majority": "camelCase",
+        "confidence": 0.8763902129011757,
+        "mixed": false,
+        "distribution": {
+          "camelCase": 0.8777848504137492,
+          "PascalCase": 0.0426479949077021,
+          "SCREAMING_SNAKE_CASE": 0.07956715467854869
+        },
+        "sampleSize": 4595
+      },
+      "constants": {
+        "majority": "SCREAMING_SNAKE_CASE",
+        "confidence": 0.9803921568627451,
+        "mixed": false,
+        "distribution": {
+          "SCREAMING_SNAKE_CASE": 1
+        },
+        "sampleSize": 250
+      }
+    },
+    "imports": {
+      "style": "absolute",
+      "confidence": 0.9653404930436905,
+      "distribution": {
+        "absolute": 0.9653404930436905,
+        "relative": 0.034659506956309497
+      },
+      "aliasPattern": "@/"
+    },
+    "indentation": {
+      "style": "spaces",
+      "width": 2,
+      "confidence": 1
+    },
+    "codePatterns": {
+      "emptyCatches": {
+        "empty": 0,
+        "commented": 1,
+        "total": 2
+      },
+      "defaultExports": {
+        "count": 5,
+        "totalFiles": 30
+      },
+      "nullStyle": {
+        "nullCount": 3,
+        "optionalCount": 46,
+        "preference": "undefined"
+      }
+    },
+    "sampledFiles": 750,
+    "detectionTime": 956
+  },
+  "readme": {
+    "description": "Inbox Zero - your 24/7 AI email assistant Organizes your inbox, pre-drafts replies, manages your calendar, and organizes attachments. Chat with it from Slack or Telegram to manage your inbox on the go. Open source alternative to Fyxer, but more customizable and secure.",
+    "architecture": null,
+    "setup": "We offer a hosted version of Inbox Zero at [getinboxzero.com](https://www.getinboxzero.com).\n\n### Self-Hosting\n\nThe fastest way to self-host Inbox Zero is with the CLI:\n\n> **Prerequisites**: [Docker](https://docs.docker.com/engine/install/) and [Node.js](https://nodejs.org/) v24+\n\n```bash\nnpx @inbox-zero/cli setup      # One-time setup wizard\nnpx @inbox-zero/cli start      # Start containers\n```\n\nOpen http://localhost:3000\n\nFor complete self-hosting instructions, production deployment, OAuth setup, and configuration options, see our **[Self-Hosting Docs](https://docs.getinboxzero.com/hosting/quick-start)**.\n\n### Local Development\n\n> **Prerequisites**: [Docker](https://docs.docker.com/engine/install/), [Node.js](https://nodejs.org/) v24+, and [pnpm](https://pnpm.io/) v10+\n\n```bash\ngit clone https://github.com/elie222/inbox-zero.git\ncd inbox-zero\ndocker compose -f docker-compose.dev.yml up -d   # Postgres + Redis\npnpm install\nnpm run setup                                     # Interactive env setup\ncd apps/web && pnpm prisma migrate dev && cd ../..\npnpm dev\n```\n\nOpen http://localhost:3000\n\nAfter `pnpm install`, if you want to use the local Google emulator, start it with:\n\n```bash\ndocker compose -f docker-compose.dev.yml --profile google-emulator up -d\n```\n\nThen point `apps/web/.env` at it with:\n\n```bash\nGOOGLE_BASE_URL=http://localhost:4002\nGOOGLE_CLIENT_ID=emulate-google-client.apps.googleusercontent.com\nGOOGLE_CLIENT_SECRET=emulate-google-secret\n```\n\nIf you want to use the",
+    "source": "pre-section"
+  },
+  "documentation": {
+    "files": [
+      {
+        "path": "README.md",
+        "category": "project-docs",
+        "sizeBytes": 6109,
+        "lastModifiedDays": 17
+      },
+      {
+        "path": "ARCHITECTURE.md",
+        "category": "guides",
+        "sizeBytes": 10117,
+        "lastModifiedDays": 8
+      },
+      {
+        "path": "SECURITY.md",
+        "category": "guides",
+        "sizeBytes": 1005,
+        "lastModifiedDays": 18
+      },
+      {
+        "path": "apps/image-proxy-aws/README.md",
+        "category": "project-docs",
+        "sizeBytes": 890,
+        "lastModifiedDays": 45
+      },
+      {
+        "path": "packages/api/README.md",
+        "category": "project-docs",
+        "sizeBytes": 2130,
+        "lastModifiedDays": 63
+      },
+      {
+        "path": "packages/cli/README.md",
+        "category": "project-docs",
+        "sizeBytes": 2982,
+        "lastModifiedDays": 51
+      },
+      {
+        "path": "packages/loops/README.md",
+        "category": "project-docs",
+        "sizeBytes": 112,
+        "lastModifiedDays": 903
+      },
+      {
+        "path": "packages/resend/README.md",
+        "category": "project-docs",
+        "sizeBytes": 187,
+        "lastModifiedDays": 668
+      },
+      {
+        "path": "packages/tinybird/README.md",
+        "category": "project-docs",
+        "sizeBytes": 956,
+        "lastModifiedDays": 594
+      },
+      {
+        "path": "packages/tinybird-ai-analytics/README.md",
+        "category": "project-docs",
+        "sizeBytes": 1270,
+        "lastModifiedDays": 48
+      }
+    ],
+    "docsDirectory": {
+      "path": "docs/",
+      "fileCount": 78,
+      "formats": [
+        "mdx"
+      ],
+      "indexFile": null,
+      "framework": null
+    },
+    "landingPage": null
+  },
+  "secretFindings": null,
+  "envVarMap": null,
+  "duplicates": null,
+  "circularDeps": null,
+  "orphanFiles": null,
+  "complexityHotspots": null,
+  "gitIntelligence": null,
+  "dependencyIntelligence": null,
+  "technicalDebtMarkers": null,
+  "inconsistencies": null,
+  "conventionBreaks": null,
+  "aiReadinessScore": null
+}
