@@ -1,0 +1,65 @@
+version: "1.0"
+sealed_by: "AnaPlan"
+feature: "Type the failure of extractEmailOrThrow with SafeError"
+
+assertions:
+  - id: A001
+    says: "Invalid newsletter emails fail with a typed error the rest of the app can recognize"
+    block: "throws SafeError with 400 for invalid newsletter emails"
+    target: "thrown.constructor.name"
+    matcher: "equals"
+    value: "SafeError"
+
+  - id: A002
+    says: "The typed error carries a 400 status so callers can return a clean client error instead of a generic 500"
+    block: "throws SafeError with 400 for invalid newsletter emails"
+    target: "thrown.statusCode"
+    matcher: "equals"
+    value: 400
+
+  - id: A003
+    says: "The error message stays exactly 'Invalid newsletter email address' so existing logs and Sentry breadcrumbs keep grouping together"
+    block: "throws SafeError with 400 for invalid newsletter emails"
+    target: "thrown.message"
+    matcher: "equals"
+    value: "Invalid newsletter email address"
+
+  - id: A004
+    says: "The thrown error is recognized as a SafeError, not a plain Error, so callers can branch on it safely"
+    block: "throws SafeError with 400 for invalid newsletter emails"
+    target: "thrown.isInstanceOfSafeError"
+    matcher: "equals"
+    value: true
+
+  - id: A005
+    says: "Valid newsletter emails continue to upsert the sender record without throwing"
+    block: "normalizes email addresses when upserting newsletter records"
+    target: "prisma.newsletter.upsert.calledWith.where.email_emailAccountId.email"
+    matcher: "equals"
+    value: "sender@example.com"
+
+  - id: A006
+    says: "The existing unsubscribe flow keeps working unchanged after the error type change"
+    block: "unsubscribe.test.ts suite"
+    target: "suite.passed"
+    matcher: "equals"
+    value: true
+
+  - id: A007
+    says: "The error is thrown from the right function, so callers know exactly where the failure originated"
+    block: "throws SafeError with 400 for invalid newsletter emails"
+    target: "thrown.thrownFrom"
+    matcher: "contains"
+    value: "extractEmailOrThrow"
+
+  - id: A008
+    says: "Empty string input is rejected, not silently passed through"
+    block: "throws SafeError with 400 for invalid newsletter emails"
+    target: "thrown"
+    matcher: "exists"
+
+file_changes:
+  - path: "apps/web/utils/senders/record.ts"
+    action: modify
+  - path: "apps/web/utils/senders/record.test.ts"
+    action: modify
