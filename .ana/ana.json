@@ -49,5 +49,6 @@
   "artifactBranch": "pre-prod",
   "branchPrefix": "feature/",
   "lastScanAt": "2026-05-21T21:01:04.947Z",
+  "setupPhase": "complete",
   "custom": {}
 }

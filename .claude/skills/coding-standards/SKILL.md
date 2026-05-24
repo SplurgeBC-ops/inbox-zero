@@ -19,18 +19,63 @@ description: "Invoke when implementing features, writing code, or reviewing code
 - UI: shadcn/ui (Tailwind)
 
 ### Library Rules
-- All local imports use `.js` extensions (`import { foo } from "./bar.js"`). TypeScript compiles without them but ESM resolution crashes at runtime.
 - Use `import type` for type-only imports, separate from value imports. Prevents runtime imports of pure types.
 - Default to Server Components. Only add `"use client"` when the component needs browser APIs, event handlers, or useState/useEffect. Data fetching belongs in Server Components — no useEffect waterfalls.
 
 ## Rules
-- Prefer named exports. Default exports only where the framework requires them (e.g., Next.js pages, layouts).
-- Use path aliases from tsconfig when configured. Relative imports: never deeper than two levels.
-- Avoid `any` — use `unknown` and narrow with type guards. `any` is acceptable only for untyped third-party boundaries. Define an interface for complex types — don't escape the type system.
-- Every catch block must do something deliberate: re-throw, return a typed error, or log with context. Empty catch blocks are never acceptable. Intentional graceful degradation — catching a failure and continuing with a fallback — is fine when the degradation is logged and observable.
-- Never hardcode API keys, secrets, database URLs, or credentials. Use environment variables or a secrets manager.
-- Avoid disabling lint rules inline. When necessary, add a comment explaining why the disable is required.
-- Explicit return types on all exported functions. Internal helpers can use inference.
+
+### Imports
+
+- **Use `@/` path aliases** (96.5% of imports are absolute via `@/`). Relative imports only for siblings or one level up. Never `../../../`.
+- **Imports go at the top.** No mid-file dynamic imports.
+- **No barrel files. No re-export patterns.** Import from the original source. Importing through a barrel hides dependencies and breaks tree-shaking.
+- **Lodash:** import specific functions — `import groupBy from "lodash/groupBy"`, not `import { groupBy } from "lodash"`.
+
+### Types
+
+- **Infer types from Zod schemas** via `z.infer<typeof schema>` rather than duplicating as separate interfaces.
+- **Don't export types/interfaces only used within the same file.** Keep file-local types unexported.
+- **Avoid `any`** — use `unknown` and narrow with type guards. `any` is acceptable only for untyped third-party boundaries.
+
+### Files & exports
+
+- **Prefer named exports.** Default exports are rare (5 of 30 sampled files); reserve them for Next.js pages, layouts, and route handlers that require them.
+- **No `null` for optional values** — use `?:` / `undefined`. Scan shows 46 optional vs 3 `| null` (strong preference). Only use `null` when the schema actually distinguishes "missing" from "explicitly null."
+- **File naming is mixed by purpose, not arbitrary.** React components are `PascalCase.tsx`. Utility files, hooks, and route handlers are `kebab-case.ts`. Match the existing convention in the directory you're editing.
+- **Helper functions go at the bottom of files**, not the top. Read top-down: public surface first, internals after.
+- **Co-locate unit tests** next to source (`utils/example.test.ts`). Integration, E2E, and AI tests go in `__tests__/`.
+
+### Logic & style
+
+- **Inline and co-locate logic at the call site by default.** Don't extract helpers that just rename and forward parameters — that's a layer without meaning.
+- **Avoid premature abstraction.** Small duplicated expressions are fine. Extract only when the helper names a meaningful domain concept, makes surrounding code clearer, or keeps correctness-sensitive rules in sync.
+- **Avoid `useEffect` for mirroring fetched props/data into local state.** Prefer derived values or explicit edit state.
+- **Avoid large/nested ternaries.** Prefer straightforward control flow, a small helper, or a lookup table.
+- **Comments explain WHY, not WHAT.** Prefer self-documenting code.
+
+### Errors
+
+- **Every catch must do something deliberate** — re-throw, return a typed error, or log with context. Graceful degradation is fine when the degradation is logged and observable.
+- **Use `SafeError`** for errors that should surface to users, and `captureException` for Sentry reporting. Don't leak raw error messages from third-party APIs.
+
+### Logging
+
+- **Tests use the real logger** — do NOT mock `@/utils/logger`.
+- **Don't duplicate logger context fields** from higher in the call chain (the scoped logger already carries them).
+- **Use `logger.trace()` for PII** (from, to, subject, message bodies). The authenticated user's own email may be logged at any level.
+
+### Secrets & config
+
+- **Never hardcode API keys, secrets, database URLs, or credentials.** Use env vars.
+- **New env vars:** add to `.env.example`, `apps/web/env.ts`, and `turbo.json`. Prefix client-side with `NEXT_PUBLIC_`.
+
+### Provider abstractions
+
+- **Prefer `EmailProvider`** (`apps/web/utils/email/types.ts`). Only fall back to `isGoogleProvider` / `isMicrosoftProvider` (`utils/email/provider-types.ts`) at true integration boundaries.
+
+### Lint
+
+- **Don't disable lint rules inline.** When unavoidable, add a comment explaining why.
 
 ## Gotchas
 - Next.js App Router components are Server Components by default. Add `'use client'` only when the component needs browser APIs, event handlers, or React hooks like useState/useEffect.

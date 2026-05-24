@@ -26,7 +26,12 @@ description: "Invoke when debugging failures, diagnosing unexpected behavior, or
 - **Webhook signature verification fails with "No signatures found matching the expected signature" even though the signing secret is correct** — Stripe signature verification requires the RAW request body, not parsed JSON. In Next.js App Router: use `request.text()`. In Express: use `express.raw({ type: "application/json" })` on the webhook route. Body parsers (like `express.json()`) modify the body and break verification.
 
 ## Rules
-*Not yet captured. This section grows from real debugging sessions.*
+
+- **Running `tsc --noEmit` at the repo root surfaces unrelated repo-wide debt** — it's not a supported validation step in this monorepo. Fix: use `pnpm --filter inbox-zero-ai build:ci` for the CI-aligned typecheck, and only when explicitly asked.
+- **`pnpm test` silently skips evals** — anything in `apps/web/__tests__/eval/` requires running `pnpm --filter inbox-zero-ai test-ai` from the repo root. A green `pnpm test` does not mean evals pass.
+- **AI / integration / E2E tests are env-gated** — `RUN_AI_TESTS`, `RUN_INTEGRATION_TESTS`, `RUN_E2E_FLOW_TESTS` must be set or the suites skip. Fix: check the relevant flag is set in your shell or `.env.test`/`.env.e2e` before assuming a suite ran.
+- **Pre-commit only runs lint** — typecheck and tests surface in CI, not at commit. Fix: don't treat a green pre-commit as a green PR; run the relevant CI step locally if the change touches typed APIs or core logic.
+- **Docs-only PRs skip CI entirely** — `test.yml` excludes `docs/**`, `**/*.md`, `**/*.mdx`. Fix: if a "docs" change also touches code paths, watch for the skip filter or split into two commits.
 
 ## Gotchas
 *Not yet captured. Add as you discover them during development.*
